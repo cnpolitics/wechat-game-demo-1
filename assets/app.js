@@ -5,7 +5,7 @@ $(document).ready(function() {
 	});
 });
 
-var myCast = [0, 0, 0, 0, 0];
+var myCast = [-1, -1, -1, -1, -1];
 
 function touchOption(optID, optNo) {
 	$(optID + ' .opt').on('touchstart', function(){
@@ -16,7 +16,7 @@ function touchOption(optID, optNo) {
 		$(optID + ' .opt.active').removeClass('active');
 		$(this).removeClass('pressing').addClass('active');
 		myCast[optNo] = $(this).index();
-//		console.log(myCast);
+		console.log(myCast);
 	});
 }
 
