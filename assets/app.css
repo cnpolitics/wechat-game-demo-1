@@ -176,8 +176,8 @@ body {
           transition: opacity ease 0.25s, border-color ease 0.25s;
 }
 .actor-name {
-  -webkit-transition: color ease 5.25s;
-          transition: color ease 5.25s;
+  -webkit-transition: color ease .25s;
+          transition: color ease .25s;
 }
 .opt.pressing.active .hex-border {
   -webkit-transition: none;
