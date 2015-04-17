@@ -26,4 +26,8 @@ $(window).load(function() {
 	touchOption('#q3', 2);
 	touchOption('#q4', 3);
 	touchOption('#q5', 4);
+	
+	$('.page-nav').click(function(){
+		$.fn.fullpage.moveSectionDown();
+	});
 });

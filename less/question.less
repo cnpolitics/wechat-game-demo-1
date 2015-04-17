@@ -13,7 +13,7 @@
 /*--- Role info ---*/
 .role {
 	position: relative;
-	width: 17.2em;
+	width: 16.2em;
 	margin: 0 auto;
 	/*padding-top: 2em;*/
 	text-align: center;
@@ -28,8 +28,9 @@
 
 .role-tagline {
 	margin-top: 0.375em;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 	color: @theme;
+	font-size: 0.8125em;
 }
 
 .role-profile {
@@ -44,7 +45,7 @@
 	transform: translate3d(-50%,0,0);*/
 	width: (186 + 120px);
 	height: (108 + 140px);
-	margin: 3em auto 0;
+	margin: 2em auto;
 	-webkit-user-select:none;
 }
 
@@ -172,8 +173,48 @@
 }
 /*--- Hexagon border END ---*/
 
+/*--- Page nav ---*/
+.page-nav {
+	position: relative;
+	position: absolute;
+	left: 0;
+	bottom: 1em;
+	width: 100%;
+	height: 1em;
+	/*margin-top: 2em;*/
+}
 
+.arrow-dn {
+	display: block;
+	width: 0.75em;
+	height: 0.75em;
+	margin: 0 auto;
+	border-right: 2px solid white;
+	border-bottom: 2px solid white;
+	transform: scaleY(0.5774) rotate(45deg);
+	animation: flick-arrow linear 2.25s infinite;
+}
 
+@keyframes flick-arrow {
+	  0% { opacity: .25; }
+	 50% { opacity: .5; }
+	100% { opacity: .25; }
+}
+
+.text-nav {
+	margin: 0;
+	color: @theme;
+	font-size: 0.8125em;
+	text-align: center;
+	animation: flick-text linear 2.25s infinite;
+}
+
+@keyframes flick-text {
+	  0% { opacity: .25; }
+	 50% { opacity: .75; }
+	100% { opacity: .25; }
+}
+/*--- Page nav ---*/
 
 /*--- fullPage.js styles ---*/
 /*html.fp-enabled,
