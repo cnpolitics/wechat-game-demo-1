@@ -13,7 +13,7 @@
 /*--- Role info ---*/
 .role {
 	position: relative;
-	width: 16.2em;
+	width: 17.2em;
 	margin: 0 auto;
 	/*padding-top: 2em;*/
 	text-align: center;
@@ -45,6 +45,7 @@
 	width: (186 + 120px);
 	height: (108 + 140px);
 	margin: 3em auto 0;
+	-webkit-user-select:none;
 }
 
 .opt {
@@ -109,7 +110,7 @@
 	border-left: solid 2px white;
 	border-right: solid 2px white;
 	box-sizing: border-box;
-	opacity: 0.25;
+	opacity: .25;
 }
 
 .hex-border::before,
@@ -121,6 +122,7 @@
 	width: 84.85px;
 	height: 84.85px;
 	box-sizing: border-box;
+	background-color: rgba(0,0,0,0);
 	transform: scaleY(0.5774) rotate(-45deg);
 }
 
@@ -132,8 +134,8 @@
 
 .hex-border::after {
 	bottom: -42.4264px;
-	border-bottom: solid 2.8284px #ffffff;
-	border-left: solid 2.8284px #ffffff;
+	border-bottom: solid 2.8284px white;
+	border-left: solid 2.8284px white;
 }
 
 .opt.active .hex-border,
@@ -145,6 +147,28 @@
 
 .opt.active .actor-name {
 	color: @theme;	
+}
+
+.opt.pressing .hex-border,
+.opt.pressing .hex-border::before,
+.opt.pressing .hex-border::after {
+	background-color: @theme;
+	border-color: @theme;
+}
+
+.hex-border,
+.hex-border::before,
+.hex-border::after {
+	transition: opacity ease .25s, border-color ease .25s;
+}
+
+.actor-name {
+	transition: color ease 5.25s;
+}
+
+.opt.pressing.active .hex-border {
+	transition: none;
+	opacity: .25;
 }
 /*--- Hexagon border END ---*/
 
