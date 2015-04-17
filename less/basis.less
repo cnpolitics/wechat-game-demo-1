@@ -5,12 +5,19 @@ html {
 body {
 	width: 100%;
 	height: 100%;
+	margin: 0;
 	color: @text;
-	background: url(/assets/bg.jpg) @bg no-repeat fixed;
+	background: url(bg.jpg) @bg no-repeat fixed;
 	background-size: cover;
 	font-family: "Helvetica Neue", "Roboto", "Segoe UI", "Arial", sans-serif;
 	font-size: 1em;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.main-wrap {
+	width: 100%;
+	height: 100%;
 }
