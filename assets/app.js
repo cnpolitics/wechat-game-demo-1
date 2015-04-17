@@ -16,7 +16,6 @@ function touchOption(optID, optNo) {
 		$(optID + ' .opt.active').removeClass('active');
 		$(this).removeClass('pressing').addClass('active');
 		myCast[optNo] = $(this).index();
-		console.log(myCast);
 	});
 }
 
