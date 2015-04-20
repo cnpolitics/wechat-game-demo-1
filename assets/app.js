@@ -32,11 +32,26 @@ $(window).load(function() {
 });
 
 $(window).load(function() {
-	$('.btn-share, .host').on('touchstart', function(){
+	$('.btn-share').on('touchstart', function(){
 		$(this).addClass('pressing');
 	});
 	
-	$('.btn-share, .host').on('click touchend', function(){
+	$('.btn-share').on('touchend', function(){
+		$(this).removeClass('pressing');
+
+		$('#share-guide').fadeIn(250);
+		$('#share-guide').on('touchend', function(){
+			$(this).fadeOut(250);
+		});
+	});
+});
+
+$(window).load(function() {
+	$('.host').on('touchstart', function(){
+		$(this).addClass('pressing');
+	});
+	
+	$('.host').on('click touchend', function(){
 		$(this).removeClass('pressing');
 	});
 });
