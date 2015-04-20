@@ -1,5 +1,5 @@
-//var myCast = [-1, -1, -1, -1, -1];
-var myCast = [0, 0, 0, 0, 0];
+var myCast = [-1, -1, -1, -1, -1];
+//var myCast = [0, 0, 0, 0, 0];
 var myDir = -1;
 
 function initOption(optID, optNo) {
