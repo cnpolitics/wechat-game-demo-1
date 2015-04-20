@@ -32,11 +32,11 @@ $(window).load(function() {
 });
 
 $(window).load(function() {
-	$('.btn-share').on('touchstart', function(){
+	$('.btn-share, .host').on('touchstart', function(){
 		$(this).addClass('pressing');
 	});
 	
-	$('.btn-share').on('click touchend', function(){
+	$('.btn-share, .host').on('click touchend', function(){
 		$(this).removeClass('pressing');
 	});
 });

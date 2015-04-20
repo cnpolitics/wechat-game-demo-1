@@ -112,11 +112,17 @@
 
 /*--- Result footer ---*/
 .host {
+	display: block;
 	position: absolute;
 	bottom: 1.6em;
 	width: 11.5em;
 	font-size: 0.625em;
 	text-align: center;
+	transition: opacity ease .25s;
+}
+
+.host.pressing {
+	opacity: .25;
 }
 
 #host-treebody { left: 1em; }
