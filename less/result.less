@@ -1,0 +1,150 @@
+/*--- Directore hexagon border ---*/
+.hex-border-alt {
+	display: inline-block;
+	width: calc(100% * 0.57735);
+	height: 100%;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	box-sizing: border-box;
+	opacity: .25;
+}
+
+.hex-border-alt::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: calc((100% / 2) - ((100% * 0.57735) / 2));
+	width: inherit;
+	height: inherit;
+	border-top: inherit;
+	border-bottom: inherit;
+	box-sizing: border-box;
+	transform: rotateZ(60deg);
+}
+
+.hex-border-alt::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: calc((100% / 2) - ((100% * 0.57735) / 2));
+	width: inherit;
+	height: inherit;
+	border-top: inherit;
+	border-bottom: inherit;
+	box-sizing: border-box;
+	transform: rotateZ(-60deg);
+}
+/*--- Hexagon border END ---*/
+
+/*--- Director info ---*/
+.director {
+	position: relative;
+	width: 14em;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1.5;
+}
+
+.dir-avatar-wrap {
+	position: relative;
+	width: 104px;
+	height: 104px;
+	margin: 0 auto 1em;
+	text-align: center;
+}
+
+.dir-avatar {
+	position: absolute;
+	top: 0;
+	left: ((104px - 119)/2);
+	width: 119px;
+	height: 104px;
+	background-position: center center;
+	background-size: cover;
+	clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.dir-name {
+	margin: 0;
+	font-size: 1.125em;
+	line-height: 1;
+}
+
+.dir-tagline {
+	margin-top: 0.375em;
+	margin-bottom: 0;
+	color: @theme;
+	font-size: 0.8125em;
+}
+/*--- Director info END ---*/
+
+/*--- Share button ---*/
+.btn-share {
+	position: relative;
+	width: 104px;
+	height: 104px;
+	margin: 1em auto 6em;
+	text-align: center;
+	user-select: none;
+	transition: opacity ease .25s;
+}
+
+.label-share {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	margin: 0;
+	color: @theme;
+	font-size: 0.875em;
+	line-height: 1.428; 
+	transform: translateY(-55%);
+}
+
+.border-share {
+	border-color: @theme;
+	opacity: 1;
+}
+
+.btn-share.pressing {
+	opacity: .25;
+}
+/*--- Share button END ---*/
+
+/*--- Result footer ---*/
+.host {
+	position: absolute;
+	bottom: 1.6em;
+	width: 11.5em;
+	font-size: 0.625em;
+	text-align: center;
+}
+
+#host-treebody { left: 1em; }
+#host-mzread { right: 1em;}
+
+.host-logo {
+	width: 2em;
+	height: 2em;
+	margin: 0 auto;
+	background-color: white;
+}
+
+.host-info {
+	margin-top: 0.8em;
+	margin-bottom: 0.8em;
+	line-height: 1.4;
+}
+
+.btn-follow {
+	width: 7.2em;
+	height: 2.4em;
+	margin: 0 auto;
+	padding: 0.6em;
+	box-sizing: border-box;
+	border: 1px solid @theme;
+	border-radius: 0.4em;
+	color: @theme;
+	line-height: 1;
+}
+
+/*--- Result footer END ---*/

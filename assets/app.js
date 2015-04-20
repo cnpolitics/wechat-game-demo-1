@@ -30,3 +30,13 @@ $(window).load(function() {
 		$.fn.fullpage.moveSectionDown();
 	});
 });
+
+$(window).load(function() {
+	$('.btn-share').on('touchstart', function(){
+		$(this).addClass('pressing');
+	});
+	
+	$('.btn-share').on('click touchend', function(){
+		$(this).removeClass('pressing');
+	});
+});
