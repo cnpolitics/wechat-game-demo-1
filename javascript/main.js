@@ -1,7 +1,24 @@
 $(document).ready(function() {
 	$('.main-wrap').fullpage({
 		scrollOverflow: true,
-		sectionSelector: '.js-page'
+		sectionSelector: '.js-page',		
+		onLeave: function(index, nextIndex, direction){
+			if (myCast[0] === -1) {
+			
+			} else if (myCast[1] === -1) {
+			
+			} else if (myCast[2] === -1) {
+			
+			} else if (myCast[3] === -1) {
+			
+			} else if (myCast[4] === -1) {
+			
+			}
+			
+			if ($('#result').hasClass('active')) {
+				$('#result .director').removeClass().addClass('director dir-' + myDir);
+			}
+		}
 	});
 });
 
