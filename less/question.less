@@ -56,28 +56,34 @@
 .opt-a {
 	top: 0;
 	left: 0;
+	z-index: 100;
 }
 
 .opt-b {
 	top: 0;
 	left: 124px;
+	z-index: 100;
 }
 
 .opt-c {
-	top: 108px;
+	top: 107.5px;
 	left: 62px;
+	z-index: 0;
 }
 
 .opt-d {
-	top: 108px;
+	top: 107.5px;
 	left: 186px;
+	z-index: 0;
 }
 
 .avatar {
 	width: 120px;
-	height: 140px;
+	height: 139px;
 	background-position: center center;
 	background-size: cover;
+	mask-image: url(hex-mask.png);
+	mask-size: cover;
 	clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 
@@ -100,6 +106,7 @@
 }
 
 /*--- Hexagon border ---*/
+
 .hex-border {
 	position: absolute;
 	top: 0;
@@ -121,7 +128,9 @@
 	z-index: 100;
 	left: 15.5736px;
 	width: 84.85px;
+	width: 85px;
 	height: 84.85px;
+	height: 85px;
 	box-sizing: border-box;
 	background-color: rgba(0,0,0,0);
 	transform: scaleY(0.5774) rotate(-45deg);
@@ -129,14 +138,18 @@
 
 .hex-border::before {
 	top: -42.4264px;
-	border-top: solid 2.8284px white;
-	border-right: solid 2.8284px white;
+	/*border-top: solid 2.8284px white;
+	border-right: solid 2.8284px white;*/
+	border-top: solid 3px white;
+	border-right: solid 3px white;
 }
 
 .hex-border::after {
 	bottom: -42.4264px;
-	border-bottom: solid 2.8284px white;
-	border-left: solid 2.8284px white;
+	/*border-bottom: solid 2.8284px white;
+	border-left: solid 2.8284px white;*/
+	border-bottom: solid 3px white;
+	border-left: solid 3px white;
 }
 
 .opt.active .hex-border,
