@@ -26,3 +26,29 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+.snackbar {
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	vertical-align: middle;
+	background-color: fadeout(@theme, 25%);
+	transform: translate3d(0, -1.5em, 0);
+	transition: transform ease .25s;
+}
+
+.snackbar.active {
+	transform: translate3d(0, 0, 0);
+}
+
+.message {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	font-size: 0.625em;
+	line-height: 1;
+	text-align: center;
+}

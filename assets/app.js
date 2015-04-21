@@ -85,20 +85,56 @@ $(document).ready(function() {
 		scrollOverflow: true,
 		sectionSelector: '.js-page',		
 		onLeave: function(index, nextIndex, direction){
-			if (myCast[0] === -1) {
+			console.log(index);
 			
-			} else if (myCast[1] === -1) {
-			
-			} else if (myCast[2] === -1) {
-			
-			} else if (myCast[3] === -1) {
-			
-			} else if (myCast[4] === -1) {
-			
-			}
-			
-			if ($('#result').hasClass('active')) {
-				$('#result .director').removeClass().addClass('director dir-' + myDir);
+			// Handle the `#omission` reminding message.
+			switch (nextIndex) {
+				case 3:
+					if (myCast[0] === -1) {
+						$('#omission').addClass('active');
+					} else {
+						$('#omission').removeClass('active');
+					}
+					break;
+				
+				case 4:
+					if (myCast[0] === -1 || myCast[1] === -1) {
+						$('#omission').addClass('active');
+					} else {
+						$('#omission').removeClass('active');
+					}
+					break;
+					
+				case 5:
+					if (myCast[0] === -1 || myCast[1] === -1 || myCast[2] === -1) {
+						$('#omission').addClass('active');
+					} else {
+						$('#omission').removeClass('active');
+					}
+					break;
+					
+				case 6:
+					if (myCast[0] === -1 || myCast[1] === -1 || myCast[2] === -1 || myCast[3] === -1) {
+						$('#omission').addClass('active');
+					} else {
+						$('#omission').removeClass('active');
+					}
+					break;
+				
+				// Result page.
+				case 7:
+					if (myCast[0] === -1 || myCast[1] === -1 || myCast[2] === -1 || myCast[3] === -1 || myCast[4] === -1) {
+						$('#omission').addClass('active');
+					} else {
+						$('#omission').removeClass('active');
+					}
+					
+					// Fill the result info.
+					$('#result .director').removeClass().addClass('director dir-' + myDir);
+					break;
+				
+				default:
+					$('#omission').removeClass('active');
 			}
 		}
 	});
