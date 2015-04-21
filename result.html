@@ -16,51 +16,50 @@
 </head>
 
 <body>
-	<main class="main-wrap">		
-		<div id="result" class="q-wrap js-page">
-			<div class="result-info">
-				<section class="director">
-					<div class="dir-avatar-wrap">
-						<div class="dir-avatar"></div>
-						<div class="hex-border-alt"></div>
+	<div class="main-wrap">		
+		<div id="result" class="page-wrap js-page">
+				<div id="result-info active">
+					<section class="director dir-1">
+						<div class="dir-avatar-wrap">
+							<div class="dir-avatar"></div>
+							<div class="hex-border-alt"></div>
+						</div>
+						<h2 class="dir-type">型导演</h2>
+						<p class="dir-tagline"></p>		
+					</section>
+					
+					<div class="btn-hex btn-share">
+						<div class="hex-border-alt btn-hex-border"></div>
+						<p class="btn-label">分享到<br>微信朋友圈</p>
 					</div>
-					<h2 class="dir-type">型导演</h2>
-					<p class="dir-tagline"></p>		
-				</section>
-				
-				<div class="btn-hex btn-share">
-					<div class="hex-border-alt btn-hex-border"></div>
-					<p class="btn-label">分享到<br>微信朋友圈</p>
+					
+					<footer class="result-footer">
+						<a href="#" id="host-threebody" class="host">
+							<div id="logo-threebody" class="host-logo"></div>
+							<p class="host-info">关注三体社区公众号，获取更多资讯</p>
+							<div class="btn-follow">点击关注</div>
+						</a>
+						<a href="#" id="host-mzread" class="host">
+							<div id="logo-mzread" class="host-logo"></div>
+							<p class="host-info">知名文艺大号，关注查看三体资讯及赠书信息</p>
+							<div class="btn-follow">点击关注</div>
+						</a>
+					</footer>
 				</div>
 				
-				<footer class="result-footer">
-					<a href="#" id="host-treebody" class="host">
-						<div id="logo-treebody" class="host-logo"></div>
-						<p class="host-info">关注三体社区公众号，获取更多资讯</p>
-						<div class="btn-follow">点击关注</div>
-					</a>
-					<a href="#" id="host-mzread" class="host">
-						<div id="logo-mzread" class="host-logo"></div>
-						<p class="host-info">知名文艺大号，关注查看三体资讯及赠书信息</p>
-						<div class="btn-follow">点击关注</div>
-					</a>
-				</footer>
-			</div>
-			
-			<div class="omission-guide">
-				<div class="btn-hex btn-return">
-					<div class="hex-border-alt btn-hex-border"></div>
-					<p class="btn-label">继续选演员</p>
+				<div id="omission-guide">
+					<p class="omission-heading">还有一些角色<br>您没有挑选演员</p>
+					<div class="btn-hex btn-return">
+						<div class="hex-border-alt btn-hex-border"></div>
+						<p class="btn-label">继续选演员</p>
+					</div>
 				</div>
+				
+				<div id="share-guide" class="modal-wrap">
+					<div class="guide-bubble">点这里分享</div>
+				</div>	
 			</div>
-			
-			<div id="share-guide" class="modal-wrap">
-				<div class="guide-bubble">点这里分享</div>
-			</div>	
 		</div>
-	</main>
-	<div id="omission" class="snackbar active">
-		<p class="message">之前的角色，您还没有挑选演员</p>
 	</div>
 	
 	<script type="text/javascript" src="assets/app.js"></script>

@@ -9,6 +9,7 @@ function initOption(optID, optNo) {
 	$(optID + ' .opt').on('click touchend', function(){
 		$(optID + ' .opt.active').removeClass('active');
 		$(this).removeClass('pressing').addClass('active');
-		myCast[optNo] = $(this).index();
+		myCast[optNo] = $(this).index(optID + ' .opt');
+//		console.log(myCast);
 	});
 }
