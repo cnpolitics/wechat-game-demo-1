@@ -1,15 +1,3 @@
-.q-wrap {
-	display: none;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	/*min-height: 480px;*/
-}
-
-.q-wrap.active {
-	display: block;
-}
-
 /*--- Role info ---*/
 .role {
 	position: relative;
@@ -106,7 +94,6 @@
 }
 
 /*--- Hexagon border ---*/
-
 .hex-border {
 	position: absolute;
 	top: 0;
@@ -185,6 +172,34 @@
 	opacity: .25;
 }
 /*--- Hexagon border END ---*/
+
+.deco-cell-1 {
+	top: 0;
+	left: -124px;
+}
+
+.deco-cell-2 {
+	top: 0;
+	left: (124px * 2);
+}
+
+.deco-cell-3 {
+	top: 107.5px;
+	left: (62px - 124);
+}
+
+.deco-cell-4 {
+	top: 107.5px;
+	left: (186px + 124);
+}
+
+.deco-cell-1,
+.deco-cell-2,
+.deco-cell-3,
+.deco-cell-4 {
+	opacity: .1;
+	z-index: -100;
+}
 
 /*--- Page nav ---*/
 .page-nav {
