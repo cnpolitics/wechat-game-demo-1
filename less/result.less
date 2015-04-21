@@ -133,18 +133,22 @@
 	opacity: .25;
 }
 
-#host-treebody { left: 1em; }
+#host-threebody { left: 1em; }
 #host-mzread { right: 1em;}
 
 .host-logo {
-	width: 2em;
+	width: 5em;
 	height: 2em;
 	margin: 0 auto;
-	background-color: white;
+	background-size: cover;
 }
 
+#logo-threebody { background-image: url(logo-threebody.png); }
+#logo-mzread { background-image: url(logo-mzread.png); }
+
 .host-info {
-	margin-top: 0.8em;
+	color: @text !important;	/* Hack for Android WebView */
+	margin-top: 0.4em;
 	margin-bottom: 0.8em;
 	line-height: 1.4;
 }
