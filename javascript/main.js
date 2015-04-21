@@ -2,7 +2,7 @@ var myDir = -1;
 
 $(document).ready(function() {
 	var hashURL = window.location.hash;
-	console.log(hashURL);
+//	console.log(hashURL);
 	switch (hashURL) {
 		case '#wenyi':
 			$('#cover .director').addClass('dir-0');
@@ -109,7 +109,8 @@ $(document).ready(function() {
 								document.title = '我是xxxxx这样的大师型导演，你也来测测吧';
 								break;
 							default: 
-								window.location.href.split('#')[0];
+								window.location.hash = '';
+//								window.location.href.split('#')[0];
 								document.title = '测测我是什么类型的导演';
 						}
 						
