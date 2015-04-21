@@ -9,50 +9,50 @@ $(document).ready(function() {
 			switch (nextIndex) {
 				case 3:
 					if (myCast[0] === -1) {
-						$('#omission').addClass('active');
+						$('#omission-message').addClass('active');
 					} else {
-						$('#omission').removeClass('active');
+						$('#omission-message').removeClass('active');
 					}
 					break;
 				
 				case 4:
 					if (myCast[0] === -1 || myCast[1] === -1) {
-						$('#omission').addClass('active');
+						$('#omission-message').addClass('active');
 					} else {
-						$('#omission').removeClass('active');
+						$('#omission-message').removeClass('active');
 					}
 					break;
 					
 				case 5:
 					if (myCast[0] === -1 || myCast[1] === -1 || myCast[2] === -1) {
-						$('#omission').addClass('active');
+						$('#omission-message').addClass('active');
 					} else {
-						$('#omission').removeClass('active');
+						$('#omission-message').removeClass('active');
 					}
 					break;
 					
 				case 6:
 					if (myCast[0] === -1 || myCast[1] === -1 || myCast[2] === -1 || myCast[3] === -1) {
-						$('#omission').addClass('active');
+						$('#omission-message').addClass('active');
 					} else {
-						$('#omission').removeClass('active');
+						$('#omission-message').removeClass('active');
 					}
 					break;
 				
 				// Result page.
 				case 7:
 					if (myCast[0] === -1 || myCast[1] === -1 || myCast[2] === -1 || myCast[3] === -1 || myCast[4] === -1) {
-						$('#omission').addClass('active');
+						$('#omission-message, #omission-guide').addClass('active');
 					} else {
-						$('#omission').removeClass('active');
+						$('#result-info').addClass('active');
+						$('#omission-message, #omission-guide').removeClass('active');
 					}
-					
 					// Fill the result info.
 					$('#result .director').removeClass().addClass('director dir-' + myDir);
 					break;
 				
 				default:
-					$('#omission').removeClass('active');
+					$('#omission-message').removeClass('active');
 			}
 		}
 	});
