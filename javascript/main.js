@@ -41,8 +41,24 @@ $(document).ready(function() {
 				
 				// Result page.
 				case 7:
-					if (myCast[0] === -1 || myCast[1] === -1 || myCast[2] === -1 || myCast[3] === -1 || myCast[4] === -1) {
+					if (myCast[0] === -1 || myCast[1] === -1 || 
+						myCast[2] === -1 || myCast[3] === -1 || myCast[4] === -1) {
 						$('#omission-message, #omission-guide').addClass('active');
+						
+						// Actions of the `.btn-return`
+						$('.btn-return').on('touchend', function(){
+							if (myCast[0] === -1) {
+								$.fn.fullpage.moveTo(2);
+							} else if (myCast[1] === -1) {
+								$.fn.fullpage.moveTo(3);
+							} else if (myCast[2] === -1) {
+								$.fn.fullpage.moveTo(4);
+							} else if (myCast[3] === -1) {
+								$.fn.fullpage.moveTo(5);
+							} else {
+								$.fn.fullpage.moveTo(6);
+							}
+						});
 					} else {
 						$('#result-info').addClass('active');
 						$('#omission-message, #omission-guide').removeClass('active');
@@ -78,19 +94,19 @@ $(window).load(function() {
 		$(this).removeClass('pressing');
 	});
 	
-	// Actions of the `.btn-share`
-	$('.btn-share').on('touchend', function(){
-		$('#share-guide').fadeIn(250);
-		$('#share-guide').on('touchend', function(){
-			$(this).fadeOut(250);
-		});
-	});
-	
 	// Interactions of the `.hosts` 
 	$('.host').on('touchstart', function(){
 		$(this).addClass('pressing');
 	});
 	$('.host').on('click touchend', function(){
 		$(this).removeClass('pressing');
+	});
+	
+	// Actions of the `.btn-share`
+	$('.btn-share').on('touchend', function(){
+		$('#share-guide').fadeIn(250);
+		$('#share-guide').on('touchend', function(){
+			$(this).fadeOut(250);
+		});
 	});
 });
