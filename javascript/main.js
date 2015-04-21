@@ -87,7 +87,7 @@ $(window).load(function() {
 	initOption('#q4', 3);
 	initOption('#q5', 4);
 	
-	$('.page-nav').click(function(){
+	$('.page-nav, .btn-start').on('click touchedn', function(){
 		$.fn.fullpage.moveSectionDown();
 	});
 	
