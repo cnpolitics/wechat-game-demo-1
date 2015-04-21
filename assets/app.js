@@ -106,7 +106,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	$('.main-wrap').fullpage({
 		scrollOverflow: true,
-		sectionSelector: '.js-page',		
+		sectionSelector: '.js-page',	
 		onLeave: function(index, nextIndex, direction){
 //			console.log(index);
 			
@@ -214,30 +214,30 @@ $(window).load(function() {
 	initOption('#q4', 3);
 	initOption('#q5', 4);
 	
-	$('.page-nav, .btn-start').on('click touchedn', function(){
+	$('.page-nav, .btn-start').on('click touchedn', function() {
 		$.fn.fullpage.moveSectionDown();
 	});
 	
 	// Interactions of the `.btn-hex`
-	$('.btn-hex').on('touchstart', function(){
+	$('.btn-hex').on('touchstart', function() {
 			$(this).addClass('pressing');
 		});
-	$('.btn-hex').on('touchend', function(){
+	$('.btn-hex').on('touchend', function() {
 		$(this).removeClass('pressing');
 	});
 	
 	// Interactions of the `.hosts` 
-	$('.host').on('touchstart', function(){
+	$('.host').on('touchstart', function() {
 		$(this).addClass('pressing');
 	});
-	$('.host').on('click touchend', function(){
+	$('.host').on('click touchend', function() {
 		$(this).removeClass('pressing');
 	});
 	
 	// Actions of the `.btn-share`
-	$('.btn-share').on('touchend', function(){
+	$('.btn-share').on('touchend', function() {
 		$('#share-guide').fadeIn(250);
-		$('#share-guide').on('touchend', function(){
+		$('#share-guide').on('touchend', function() {
 			$(this).fadeOut(250);
 		});
 	});
