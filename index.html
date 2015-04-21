@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>三体</title>
+	<title>测测我是什么类型的导演</title>
 	<meta name="title" content="三体">
 	<meta name="description" content="三体">
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0">
@@ -17,6 +17,26 @@
 
 <body>
 	<main class="main-wrap">
+		<div id="cover" class="q-wrap js-page">
+			<section class="director">
+				<div class="dir-avatar-wrap">
+					<div class="dir-avatar"></div>
+					<div class="hex-border-alt"></div>
+				</div>
+				<h2 class="dir-type">型导演</h2>
+				<p class="dir-tagline"></p>		
+			</section>
+			
+			<div class="btn-hex btn-start">
+				<div class="hex-border-alt btn-hex-border"></div>
+				<p class="btn-label">我也来<br>选演员</p>
+			</div>
+			
+			<nav class="page-nav">
+				<span class="arrow-dn"></span>
+			</nav>
+		</div>
+		
 		<div id="q1" class="q-wrap js-page">
 			<section class="role">
 				<h2 class="role-name">罗辑</h2>
@@ -201,11 +221,63 @@
 				<p class="text-nav">查看我的导演类型</p>
 			</nav>
 		</div>
+
+		<div id="result" class="q-wrap js-page">
+			<div id="result-info">
+				<section class="director">
+					<div class="dir-avatar-wrap">
+						<div class="dir-avatar"></div>
+						<div class="hex-border-alt"></div>
+					</div>
+					<h2 class="dir-type">型导演</h2>
+					<p class="dir-tagline"></p>		
+				</section>
+				
+				<div class="btn-hex btn-share">
+					<div class="hex-border-alt btn-hex-border"></div>
+					<p class="btn-label">分享到<br>微信朋友圈</p>
+				</div>
+				
+				<footer class="result-footer">
+					<a href="#" id="host-treebody" class="host">
+						<div id="logo-treebody" class="host-logo"></div>
+						<p class="host-info">关注三体社区公众号，获取更多资讯</p>
+						<div class="btn-follow">点击关注</div>
+					</a>
+					<a href="#" id="host-mzread" class="host">
+						<div id="logo-mzread" class="host-logo"></div>
+						<p class="host-info">知名文艺大号，关注查看三体资讯及赠书信息</p>
+						<div class="btn-follow">点击关注</div>
+					</a>
+				</footer>
+			</div>
+			
+			<div id="omission-guide">
+				<h2 class="omission-heading">还有一些角色<br>您没有挑选演员</h2>
+				<div class="btn-hex btn-return">
+					<div class="hex-border-alt btn-hex-border"></div>
+					<p class="btn-label">继续选演员</p>
+				</div>
+			</div>
+			
+			<div id="share-guide" class="modal-wrap">
+				<div class="guide-bubble">点这里分享</div>
+			</div>	
+		</div>
 	</main>
+	<div id="omission-message" class="snackbar">
+		<p class="message">之前的角色，您还没有挑选演员</p>
+	</div>
 	
-	<script type="text/javascript" src="assets/app.js"></script>	
+	<script type="text/javascript" src="assets/app.js"></script>
 	<script type="text/javascript">
-//		document.addEventListener('touchstart', function(){}, true);
+		/* Baidu Analytics */
+		/*var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb2544bca1b3969d5a434bea6141d59dc' type='text/javascript'%3E%3C/script%3E"));
+		_hmt.push(['_trackEvent', 'santi', 'santi_click', 'santi_test']);
+		_hmt.push(['_trackEvent', 'santi', 'santi_click', 'santi_share']);
+		_hmt.push(['_trackEvent', 'santi', 'santi_click', 'santi_follow']);
+		*/
 	</script>
 </body>
 </html>
