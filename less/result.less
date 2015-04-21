@@ -1,3 +1,11 @@
+.result-info {
+	display: none;
+}
+
+.result-info.active {
+	display: block;
+}
+
 /*--- Directore hexagon border ---*/
 .hex-border-alt {
 	display: inline-block;
@@ -79,7 +87,7 @@
 /*--- Director info END ---*/
 
 /*--- Share button ---*/
-.btn-share {
+.btn-hex {
 	position: relative;
 	width: 104px;
 	height: 104px;
@@ -89,7 +97,7 @@
 	transition: opacity ease .25s;
 }
 
-.label-share {
+.btn-label {
 	position: absolute;
 	top: 50%;
 	width: 100%;
@@ -100,12 +108,12 @@
 	transform: translateY(-55%);
 }
 
-.border-share {
+.btn-hex-border {
 	border-color: @theme;
 	opacity: 1;
 }
 
-.btn-share.pressing {
+.btn-hex.pressing {
 	opacity: .25;
 }
 /*--- Share button END ---*/
@@ -184,9 +192,18 @@
 }
 
 @keyframes spring-bubble {
-	  0% { transform: translate3d(0,0,0); }
-	 65% { transform: translate3d(0,.5em,0); }
-	100% { transform: translate3d(0,0,0); }
+	  0% { transform: translate3d(0, 0, 0); }
+	 65% { transform: translate3d(0, .5em, 0); }
+	100% { transform: translate3d(0, 0, 0); }
+}
+/*--- Share guide END ---*/
+
+/*--- Omission guide ---*/
+.omission-guide {
+	display: none;
 }
 
-/*--- Share guide END ---*/
+.omission-guide.active {
+	display: block;
+}
+/*--- Omission guide END ---*/
