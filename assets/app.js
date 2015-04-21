@@ -62,7 +62,6 @@ function answer(arr){
 
 var myCast = [-1, -1, -1, -1, -1];
 //var myCast = [0, 0, 0, 0, 0];
-var myDir = -1;
 
 function initOption(optID, optNo) {
 	$(optID + ' .opt').on('touchstart', function(){
@@ -73,12 +72,11 @@ function initOption(optID, optNo) {
 		$(optID + ' .opt.active').removeClass('active');
 		$(this).removeClass('pressing').addClass('active');
 		myCast[optNo] = $(this).index();
-		
-		myDir = answer(myCast);
-		console.log(myDir);
 	});
 }
 
+
+var myDir = -1;
 
 $(document).ready(function() {
 	$('.main-wrap').fullpage({
@@ -142,6 +140,9 @@ $(document).ready(function() {
 							}
 						});
 					} else {
+						myDir = answer(myCast);
+						console.log(myDir);
+						
 						$('#result-info').addClass('active');
 						$('#omission-message, #omission-guide').removeClass('active');
 					}

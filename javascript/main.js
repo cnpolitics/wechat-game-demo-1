@@ -1,3 +1,5 @@
+var myDir = -1;
+
 $(document).ready(function() {
 	$('.main-wrap').fullpage({
 		scrollOverflow: true,
@@ -60,6 +62,9 @@ $(document).ready(function() {
 							}
 						});
 					} else {
+						myDir = answer(myCast);
+						console.log(myDir);
+						
 						$('#result-info').addClass('active');
 						$('#omission-message, #omission-guide').removeClass('active');
 					}
