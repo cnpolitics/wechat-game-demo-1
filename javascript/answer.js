@@ -55,6 +55,6 @@ function answer(arr){
 		type = param[i][arr[i]];
 		add(type);
 	}
-	console.log('answer');
+//	console.log('answer');
 	return a.indexOf(Math.max.apply(Math, a));
 }
