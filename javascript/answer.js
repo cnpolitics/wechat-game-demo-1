@@ -39,7 +39,7 @@ function answer(arr) {
 	var param = [['k', 'w', 't', 'd'], 
 				 ['t', 'w', 'k', 'd'], 
 				 ['w', 'k', 't', 'd'], 
-				 ['d', 't', 'w', 'd'], 
+				 ['d', 't', 'w', 'k'], 
 				 ['d', 'k', 't', 'w']];
 	var type;
 //	console.log('print arr: ' + arr);
