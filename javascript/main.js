@@ -35,17 +35,15 @@ $(document).ready(function() {
 		scrollOverflow: true,
 		sectionSelector: '.js-page',	
 		onLeave: function(index, nextIndex, direction){
-//			console.log(index);
 			
 			// Handle the `#omission` reminding message.
 			switch (nextIndex) {
 				case 2:
 					if (direction === 'down') {
-//						console.log('santi_test');
-
 						// Baidu Analytics
 						_hmt.push(['_trackEvent', 'santi', 'santi_click', 'santi_test']);
 					}
+					$('#omission-message').removeClass('active');
 					break;
 				
 				case 3:
@@ -196,10 +194,8 @@ $(document).ready(function() {
 	// Baidu Analytics for `follow` clicks.
 	$('#host-threebody').click(function() {
 		_hmt.push(['_trackEvent', 'santi', 'santi_click', 'santi_follow_3b']);
-//		console.log('f-3b');
 	});
 	$('#host-mzread').click(function() {
 		_hmt.push(['_trackEvent', 'santi', 'santi_click', 'santi_follow_mz']);
-//		console.log('f-mz');
 	});
 });
