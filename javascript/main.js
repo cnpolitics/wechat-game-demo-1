@@ -102,7 +102,7 @@ $(document).ready(function() {
 						});
 					} else {
 						myDir = answer(myCast);
-						console.log('Test result: ' + myDir + ', ' + myCast);
+//						console.log('Test result: ' + myDir + ', ' + myCast);
 						
 						// Set cookie.
 						/*$.cookie('cMyCast', myCast, { expires: 1 });
@@ -112,19 +112,19 @@ $(document).ready(function() {
 						switch (myDir) {
 							case 0:
 								window.location.hash = 'kehuan';
-								document.title = '我是个诺兰这样的科幻型导演，你也来测测吧';
+								document.title = '我被鉴定为诺兰这样的科幻型导演，你也来测测吧';
 								break;
 							case 1:
 								window.location.hash = 'dashi';
-								document.title = '我是xxxxx这样的大师型导演，你也来测测吧';
+								document.title = '我被鉴定为乔治卢卡斯伦这样的大师型导演，你也来测测吧';
 								break;
 							case 2:
 								window.location.hash = 'wenyi';
-								document.title = '我是个李安这样的文艺型导演，你也来测测吧';
+								document.title = '我被鉴定为李安这样的文艺型导演，你也来测测吧';
 								break;
 							case 3:
 								window.location.hash = 'tuhao';
-								document.title = '我是个乔治卢·卡斯伦这样的大师型导演，你也来测测吧';
+								document.title = '我被鉴定为卡梅伦这样的土豪型导演，你也来测测吧';
 								break;
 							default: 
 								window.location.hash = '';
