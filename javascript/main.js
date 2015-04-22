@@ -1,5 +1,9 @@
 var myDir = -1;
 
+// Read cookie.
+/*var cMyDir = $.cookie('cMyDir');
+var cMyCast = $.cookie('cMyCast');*/
+
 $(document).ready(function() {
 	var hashURL = window.location.hash;
 //	console.log(hashURL);
@@ -22,6 +26,7 @@ $(document).ready(function() {
 		
 		default: 
 			$('#cover .director').addClass('default');
+			$('.emblem-threebody').show();
 	}
 });
 
@@ -34,6 +39,15 @@ $(document).ready(function() {
 			
 			// Handle the `#omission` reminding message.
 			switch (nextIndex) {
+				case 2:
+					if (direction === 'down') {
+//						console.log('santi_test');
+
+						// Baidu Analytics
+						_hmt.push(['_trackEvent', 'santi', 'santi_click', 'santi_test']);
+					}
+					break;
+				
 				case 3:
 					if (myCast[0] === -1) {
 						$('#omission-message').addClass('active');
@@ -88,13 +102,17 @@ $(document).ready(function() {
 						});
 					} else {
 						myDir = answer(myCast);
-//						console.log(myDir);		
+						console.log('Test result: ' + myDir + ', ' + myCast);
+						
+						// Set cookie.
+						/*$.cookie('cMyCast', myCast, { expires: 1 });
+						$.cookie('cMyDir', myDir, { expires: 1 });*/
 						
 						// Manipulate hash URL
 						switch (myDir) {
 							case 0:
 								window.location.hash = 'kehuan';
-								document.title = '我是xxxxx这样的科幻型导演，你也来测测吧';
+								document.title = '我是个诺兰这样的科幻型导演，你也来测测吧';
 								break;
 							case 1:
 								window.location.hash = 'dashi';
@@ -102,15 +120,14 @@ $(document).ready(function() {
 								break;
 							case 2:
 								window.location.hash = 'wenyi';
-								document.title = '我是xxxxx这样的文艺型导演，你也来测测吧';
+								document.title = '我是个李安这样的文艺型导演，你也来测测吧';
 								break;
 							case 3:
 								window.location.hash = 'tuhao';
-								document.title = '我是xxxxx这样的土豪型导演，你也来测测吧';
+								document.title = '我是个乔治卢·卡斯伦这样的大师型导演，你也来测测吧';
 								break;
 							default: 
 								window.location.hash = '';
-//								window.location.href.split('#')[0];
 								document.title = '测测我是什么类型的导演';
 						}
 						
@@ -126,9 +143,18 @@ $(document).ready(function() {
 			}
 		}
 	});
+	
+/*	if (typeof cMyDir != 'undefined' && typeof cMyDir != 'undefined') {
+		myDir = cMyDir;
+		myCast = cMyCast;
+		console.log(myDir);
+		console.log(myCast);
+		$.fn.fullpage.moveTo(7);
+		return;
+	}*/
 });
 
-$(window).load(function() {
+$(document).ready(function() {
 	// Initialize the options for all questions.
 	initOption('#q1', 0);
 	initOption('#q2', 1);
@@ -142,8 +168,8 @@ $(window).load(function() {
 	
 	// Interactions of the `.btn-hex`
 	$('.btn-hex').on('touchstart', function() {
-			$(this).addClass('pressing');
-		});
+		$(this).addClass('pressing');
+	});
 	$('.btn-hex').on('touchend', function() {
 		$(this).removeClass('pressing');
 	});
@@ -162,5 +188,18 @@ $(window).load(function() {
 		$('#share-guide').on('touchend', function() {
 			$(this).fadeOut(250);
 		});
+		
+		// Baidu Analytics
+		_hmt.push(['_trackEvent', 'santi', 'santi_click', 'santi_share']);
+	});
+	
+	// Baidu Analytics for `follow` clicks.
+	$('#host-threebody').click(function() {
+		_hmt.push(['_trackEvent', 'santi', 'santi_click', 'santi_follow_3b']);
+//		console.log('f-3b');
+	});
+	$('#host-mzread').click(function() {
+		_hmt.push(['_trackEvent', 'santi', 'santi_click', 'santi_follow_mz']);
+//		console.log('f-mz');
 	});
 });
